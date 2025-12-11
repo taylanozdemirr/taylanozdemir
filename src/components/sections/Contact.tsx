@@ -8,21 +8,27 @@ export function Contact() {
         message: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
     const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate submission
+        setSubmitStatus('idle');
+
+        // Simülasyon - 1.5 saniye bekleyip başarı mesajı göster
         setTimeout(() => {
             setIsSubmitting(false);
+            setSubmitStatus('success');
             setFormState({ name: '', email: '', message: '' });
-            alert('Mesajınız gönderildi!');
+
+            // 5 saniye sonra başarı mesajını gizle
+            setTimeout(() => setSubmitStatus('idle'), 5000);
         }, 1500);
     };
 
     const contactInfo = [
-        { icon: '📧', label: 'E-posta', value: 'taylan19.97@gmail.com', href: 'mailto:taylan19.97@gmail.com' },
+        { icon: '📧', label: 'E-posta', value: 'taylan19.97a@gmail.com', href: 'mailto:taylan19.97a@gmail.com' },
         { icon: '💼', label: 'LinkedIn', value: '/taylanozdemirr', href: 'https://www.linkedin.com/in/taylanozdemirr/' },
         { icon: '🐙', label: 'GitHub', value: '/taylanozdemirr', href: 'https://github.com/taylanozdemirr' },
     ];
@@ -89,11 +95,18 @@ export function Contact() {
                         onSubmit={handleSubmit}
                         className={`glass-card p-10 space-y-8 animate-on-scroll-right ${isVisible ? 'visible' : ''}`}
                     >
+                        {/* Status Messages */}
+                        {submitStatus === 'success' && (
+                            <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400 text-center">
+                                ✅ Mesajınız başarıyla iletildi! En kısa sürede size dönüş yapacağım.
+                            </div>
+                        )}
                         {/* Name Input */}
                         <div className="space-y-2">
                             <label className="text-sm text-[var(--text-secondary)]">İsim</label>
                             <input
                                 type="text"
+                                name="from_name"
                                 value={formState.name}
                                 onChange={(e) => setFormState(prev => ({ ...prev, name: e.target.value }))}
                                 placeholder="Adınız Soyadınız"
@@ -110,6 +123,7 @@ export function Contact() {
                             <label className="text-sm text-[var(--text-secondary)]">E-posta</label>
                             <input
                                 type="email"
+                                name="from_email"
                                 value={formState.email}
                                 onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
                                 placeholder="ornek@email.com"
@@ -125,6 +139,7 @@ export function Contact() {
                         <div className="space-y-2">
                             <label className="text-sm text-[var(--text-secondary)]">Mesaj</label>
                             <textarea
+                                name="message"
                                 value={formState.message}
                                 onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
                                 placeholder="Mesajınızı yazın..."

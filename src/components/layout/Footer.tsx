@@ -2,9 +2,8 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     const socialLinks = [
-        { icon: '🐙', href: 'https://github.com/', label: 'GitHub' },
-        { icon: '💼', href: 'https://linkedin.com/', label: 'LinkedIn' },
-        { icon: '🐦', href: 'https://twitter.com/', label: 'Twitter' },
+        { icon: '🐙', href: 'https://github.com/taylanozdemirr', label: 'GitHub' },
+        { icon: '💼', href: 'https://www.linkedin.com/in/taylanozdemirr/', label: 'LinkedIn' }
     ];
 
     return (
@@ -22,23 +21,6 @@ export function Footer() {
                         <span className="text-[var(--text-muted)] text-sm">
                             © {currentYear} Taylan Özdemir. Tüm hakları saklıdır.
                         </span>
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="flex items-center gap-4">
-                        {socialLinks.map((link) => (
-                            <a
-                                key={link.label}
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full glass-card flex items-center justify-center
-                  hover:scale-110 transition-transform"
-                                title={link.label}
-                            >
-                                {link.icon}
-                            </a>
-                        ))}
                     </div>
 
                     {/* Back to Top */}

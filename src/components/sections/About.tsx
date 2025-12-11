@@ -9,10 +9,9 @@ const highlights = [
 ];
 
 const timeline = [
-    { year: '2021', title: 'Kariyer Başlangıcı', desc: 'İçişleri Bakanlığı\'nda Frontend Developer olarak göreve başladım.' },
-    { year: '2022', title: 'İlk Büyük Proje', desc: 'Yüz Tanıma Sistemi projesinde lider geliştirici olarak rol aldım.' },
-    { year: '2023', title: 'Güvenlik Sistemleri', desc: 'Yetki kontrol ve loglama sistemlerini tasarladım.' },
-    { year: '2024', title: 'Tam Stack Geliştirme', desc: 'React Native ile mobil uygulamalar geliştirmeye başladım.' },
+    { year: '2021', title: 'Kariyer Başlangıcı', desc: 'Kariyerime farklı bir sektörde başlamış olsam da, zamanla bunun benim için doğru yol olmadığını fark ettim. Kendi ilgi alanlarımı, üretme isteğimi ve problem çözme motivasyonumu takip ederek yazılıma yöneldim. Bu süreçte tamamen kendi çabamla çalışarak, modern frontend teknolojilerini öğrenip projeler geliştirdim. Bugün, sevdiğim ve kendimi sürekli geliştirebildiğim bir alanda çalışmaktan büyük bir heyecan duyuyorum.' },
+    { year: '2022', title: 'Freelance', desc: 'Yazılıma yöneldikten sonra ilk freelance işlerimi almaya başladım ve gerçek projelerde çalışarak kendimi daha da geliştirdim. Her yeni iş, hem teknik becerilerimi hem de problem çözme bakış açımı geliştiren değerli bir deneyim oldu. Kendi kendime öğrendiğim temelleri, sahadaki ihtiyaçlarla birleştirerek daha güçlü ve kapsamlı bir yetkinlik kazandım.' },
+    { year: '2023', title: 'T.C İçişleri Bakanlığında Frontend Developer', desc: 'Bu deneyimlerin ardından T.C. İçişleri Bakanlığında Frontend Developer olarak göreve başladım. Burada kullanılan kurumsal projeleri modern standartlara uygun şekilde güncelleme ve yeni projeler geliştirme fırsatı buldum. Geniş kapsamlı sistemlerde çalışma deneyimi, hem teknik uzmanlığımı derinleştirdi hem de kurumsal ölçekte yazılım geliştirme süreçlerine hâkim olmamı sağladı.' }
 ];
 
 export function About() {
@@ -52,16 +51,8 @@ export function About() {
                                     className="text-6xl md:text-7xl font-bold bg-clip-text text-transparent"
                                     style={{ backgroundImage: 'var(--gradient-accent)' }}
                                 >
-                                    TÖ
+                                    <img src="pp.png" alt="" />
                                 </span>
-                            </div>
-
-                            {/* Floating Badges */}
-                            <div className="absolute -top-4 -right-4 px-4 py-2 glass-card text-sm animate-float">
-                                ⚛️ React
-                            </div>
-                            <div className="absolute -bottom-4 -left-4 px-4 py-2 glass-card text-sm animate-float delay-200">
-                                📘 TypeScript
                             </div>
                         </div>
                     </div>
@@ -100,13 +91,13 @@ export function About() {
                             <a href="#contact" className="btn-primary">
                                 İletişime Geç
                             </a>
-                            <a
+                            {/* <a
                                 href="/cv.pdf"
                                 target="_blank"
                                 className="btn-secondary"
                             >
                                 CV İndir
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

@@ -54,9 +54,6 @@ export function Projects() {
                                     >
                                         {project.icon}
                                     </span>
-                                    <span className="text-xs text-[var(--text-muted)] px-3 py-1 rounded-full bg-[var(--bg-tertiary)]">
-                                        {project.year}
-                                    </span>
                                 </div>
 
                                 {/* Title */}
@@ -90,7 +87,7 @@ export function Projects() {
                                 </div>
 
                                 {/* View Details Link */}
-                                <div className="flex items-center gap-2 text-sm font-medium group/link cursor-pointer pt-2"
+                                {/* <div className="flex items-center gap-2 text-sm font-medium group/link cursor-pointer pt-2"
                                     style={{ color: project.color }}
                                 >
                                     <span>Detayları Gör</span>
@@ -102,7 +99,7 @@ export function Projects() {
                                     >
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Hover Glow Effect */}
@@ -114,61 +111,6 @@ export function Projects() {
                             />
                         </div>
                     ))}
-                </div>
-
-                {/* Featured Project - Large Card */}
-                <div className="mt-20">
-                    <div
-                        className={`
-              glass-card p-8 md:p-12 overflow-hidden relative
-              animate-on-scroll ${isVisible ? 'visible' : ''}
-            `}
-                        style={{ transitionDelay: '0.6s' }}
-                    >
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            {/* Content */}
-                            <div className="space-y-8">
-                                <span className="badge" style={{ borderColor: projects[0].color, color: projects[0].color }}>
-                                    ⭐ Öne Çıkan Proje
-                                </span>
-                                <h3 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)]">
-                                    {projects[0].title}
-                                </h3>
-                                <p className="text-[var(--text-secondary)]">
-                                    {projects[0].description}
-                                </p>
-                                <div className="flex flex-wrap gap-3">
-                                    {projects[0].tags.map((tag) => (
-                                        <span key={tag} className="badge">{tag}</span>
-                                    ))}
-                                </div>
-                                <div className="pt-4">
-                                    <button className="btn-primary">
-                                        Projeyi İncele
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Visual */}
-                            <div className="relative">
-                                <div
-                                    className="aspect-video rounded-xl bg-[var(--bg-tertiary)] flex items-center justify-center text-6xl"
-                                    style={{
-                                        boxShadow: `0 25px 50px -12px ${projects[0].color}40`
-                                    }}
-                                >
-                                    {projects[0].icon}
-                                </div>
-                                {/* Decorative Elements */}
-                                <div
-                                    className="absolute -z-10 -top-4 -right-4 w-full h-full rounded-xl animate-pulse-glow"
-                                    style={{
-                                        background: `linear-gradient(135deg, ${projects[0].color}40, transparent)`,
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

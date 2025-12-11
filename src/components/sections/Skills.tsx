@@ -2,16 +2,9 @@ import { useState } from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { skills } from '../../data/portfolio';
 
-const categories = ['Tümü', 'Frontend', 'Language', 'Mobile', 'Styling', 'UI', 'State', 'Tooling'];
-
 export function Skills() {
-    const [activeCategory, setActiveCategory] = useState('Tümü');
     const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
     const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
-
-    const filteredSkills = activeCategory === 'Tümü'
-        ? skills
-        : skills.filter(skill => skill.category === activeCategory);
 
     return (
         <section id="skills" className="section bg-[var(--bg-secondary)]">
@@ -22,32 +15,12 @@ export function Skills() {
                     <p className="mt-6 text-[var(--text-muted)] text-center">Uzmanlaştığım teknolojiler ve araçlar</p>
                 </div>
 
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-4 mb-16">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setActiveCategory(category)}
-                            className={`
-                px-4 py-2 rounded-full text-sm font-medium
-                transition-all duration-300
-                ${activeCategory === category
-                                    ? 'bg-[var(--accent-primary)] text-[var(--bg-primary)]'
-                                    : 'glass-card text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                                }
-              `}
-                        >
-                            {category}
-                        </button>
-                    ))}
-                </div>
-
                 {/* Skills Grid */}
                 <div
                     ref={ref}
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
                 >
-                    {filteredSkills.map((skill, index) => (
+                    {skills.map((skill, index) => (
                         <div
                             key={skill.name}
                             className={`
