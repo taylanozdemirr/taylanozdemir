@@ -18,7 +18,7 @@ export function ThemeToggle() {
     const themes: Theme[] = ['light', 'dark', 'dim'];
 
     return (
-        <div className="flex items-center gap-1 p-1 rounded-full glass-card">
+        <div className="flex items-center gap-1 p-1 rounded-full ">
             {themes.map((t) => (
                 <button
                     key={t}
