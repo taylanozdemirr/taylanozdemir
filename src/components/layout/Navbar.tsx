@@ -40,7 +40,7 @@ export function Navbar() {
                 >
                     <span className="text-2xl font-bold bg-clip-text text-transparent animate-gradient"
                         style={{ backgroundImage: 'var(--gradient-accent)', backgroundSize: '200% 200%' }}>
-                        Taylan Özdemir
+                        TÖ
                     </span>
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--accent-primary)] transition-all duration-300 group-hover:w-full" />
                 </a>

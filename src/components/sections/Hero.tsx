@@ -78,12 +78,12 @@ export function Hero() {
             {/* Main Content */}
             <div className="container relative z-10 text-center px-6">
                 {/* Status Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full glass-card animate-slide-up">
+                {/* <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full glass-card animate-slide-up">
                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                     <span className="text-sm text-[var(--text-secondary)]">
                         Müsait • {personalInfo.company}
                     </span>
-                </div>
+                </div> */}
 
                 {/* Main Heading */}
                 <h1 className="mb-6 animate-slide-up delay-100">
