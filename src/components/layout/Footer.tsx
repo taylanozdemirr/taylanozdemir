@@ -1,10 +1,6 @@
 export function Footer() {
     const currentYear = new Date().getFullYear();
 
-    const socialLinks = [
-        { icon: '🐙', href: 'https://github.com/taylanozdemirr', label: 'GitHub' },
-        { icon: '💼', href: 'https://www.linkedin.com/in/taylanozdemirr/', label: 'LinkedIn' }
-    ];
 
     return (
         <footer className="py-12 border-t border-[var(--border-color)]">
