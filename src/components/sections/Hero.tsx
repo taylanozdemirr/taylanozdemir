@@ -132,7 +132,7 @@ export function Hero() {
                     </a>
                 </div>
 
-                Scroll Indicator
+                {/* Scroll Indicator */}
                 {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
                     <div className="w-6 h-10 rounded-full border-2 border-[var(--text-muted)] flex justify-center pt-2">
                         <div className="w-1.5 h-3 rounded-full bg-[var(--accent-primary)] animate-pulse" />
