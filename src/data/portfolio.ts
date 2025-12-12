@@ -67,6 +67,6 @@ export const personalInfo = {
     age: 29,
     experience: "4+ Yıl",
     company: "T.C. İçişleri Bakanlığı",
-    location: "Türkiye/Ankara",
+    location: "Ankara",
     bio: "T.C. İçişleri Bakanlığı'nda güvenlik odaklı, kritik sistemler geliştiriyorum. Modern web teknolojileri ve kullanıcı deneyimi tasarımı konularında uzmanlaşmış bir Frontend Developer olarak, karmaşık sorunlara zarif çözümler üretmeye odaklanıyorum."
 };
