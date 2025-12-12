@@ -51,7 +51,7 @@ export function About() {
                                     className="text-6xl md:text-7xl font-bold bg-clip-text text-transparent"
                                     style={{ backgroundImage: 'var(--gradient-accent)' }}
                                 >
-                                    <img src="pp.png" alt="" />
+                                    <img src={`${import.meta.env.BASE_URL}pp.png`} alt="" />
                                 </span>
                             </div>
                         </div>
