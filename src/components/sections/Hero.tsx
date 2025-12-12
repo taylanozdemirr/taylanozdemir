@@ -201,14 +201,14 @@ export function Hero() {
                             </div>
 
                             {/* Floating decorative elements */}
-                            <div className="floating-badge react-badge">
+                            {/* <div className="floating-badge react-badge">
                                 <span>⚛️</span>
                                 <span>React</span>
                             </div>
                             <div className="floating-badge ts-badge">
                                 <span>📘</span>
                                 <span>TypeScript</span>
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Background decoration circles */}
